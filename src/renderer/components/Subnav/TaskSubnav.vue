@@ -1,16 +1,7 @@
 <template>
   <nav class="subnav-inner">
     <h3>{{ title }}</h3>
-    <ul>
-      <li
-        @click="() => nav('history')"
-        :class="[ current === 'history' ? 'active' : '' ]"
-      >
-        <i class="subnav-icon">
-          <mo-icon name="task-history" width="20" height="20" />
-        </i>
-        <span>{{ $t('task.history') }}</span>
-      </li>
+    <ul class="top-menu">
       <li
         @click="() => nav('active')"
         :class="[ current === 'active' ? 'active' : '' ]"
@@ -37,6 +28,17 @@
           <mo-icon name="task-stop" width="20" height="20" />
         </i>
         <span>{{ $t('task.stopped') }}</span>
+      </li>
+    </ul>
+    <ul>
+      <li
+        @click="() => nav('history')"
+        :class="[ current === 'history' ? 'active' : '' ]"
+      >
+        <i class="subnav-icon">
+          <mo-icon name="task-history" width="20" height="20" />
+        </i>
+        <span>{{ $t('task.history') }}</span>
       </li>
     </ul>
   </nav>
