@@ -3,13 +3,13 @@
     <h3>{{ title }}</h3>
     <ul>
       <li
-        @click="() => nav('all-tasks')"
-        :class="[ current === 'all-tasks' ? 'active' : '' ]"
+        @click="() => nav('history')"
+        :class="[ current === 'history' ? 'active' : '' ]"
       >
         <i class="subnav-icon">
-          <mo-icon name="menu-task" width="20" height="20" />
+          <mo-icon name="task-history" width="20" height="20" />
         </i>
-        <span>{{ $t('task.all-tasks') }}</span>
+        <span>{{ $t('task.history') }}</span>
       </li>
       <li
         @click="() => nav('active')"
@@ -53,7 +53,7 @@
     props: {
       current: {
         type: String,
-        default: 'all-tasks'
+        default: 'history'
       }
     },
     computed: {
@@ -62,7 +62,7 @@
       }
     },
     methods: {
-      nav (status = 'all-tasks') {
+      nav (status = 'history') {
         this.$router.push({
           path: `/task/${status}`
         }).catch(err => {

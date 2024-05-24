@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Mengunduh',
   'waiting': 'Mengunggu',
   'stopped': 'Terhenti',

@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'การดาวน์โหลด',
   'waiting': 'กำลังรอ',
   'stopped': 'หยุดแล้ว',

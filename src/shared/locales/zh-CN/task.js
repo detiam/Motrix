@@ -1,4 +1,5 @@
 export default {
+  'history': '全部任务',
   'active': '下载中',
   'waiting': '等待中',
   'stopped': '已停止',

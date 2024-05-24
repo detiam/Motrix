@@ -63,7 +63,7 @@
     props: {
       status: {
         type: String,
-        default: 'all-tasks'
+        default: 'history'
       }
     },
     computed: {
@@ -78,9 +78,9 @@
       subnavs () {
         return [
           {
-            key: 'all-tasks',
-            title: this.$t('task.all-tasks'),
-            route: '/task/all-tasks'
+            key: 'history',
+            title: this.$t('task.history'),
+            route: '/task/history'
           },
           {
             key: 'active',

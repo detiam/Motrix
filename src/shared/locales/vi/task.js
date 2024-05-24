@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Đang tải về',
   'waiting': 'Đang chờ',
   'stopped': 'Ngừng',

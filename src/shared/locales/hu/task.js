@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Letöltés',
   'waiting': 'Varakozás',
   'stopped': 'Lealitva',

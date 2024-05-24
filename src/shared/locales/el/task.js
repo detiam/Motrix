@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Γίνεται λήψη',
   'waiting': 'Σε αναμονή',
   'stopped': 'Σταματημένα',

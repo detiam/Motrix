@@ -143,7 +143,7 @@ export default class Api {
   }
 
   updateActiveTaskOption (options) {
-    this.fetchTaskList({ type: 'all-tasks' })
+    this.fetchTaskList({ type: 'history' })
       .then((data) => {
         if (isEmpty(data)) {
           return
@@ -264,7 +264,7 @@ export default class Api {
   fetchTaskList (params = {}) {
     const { type } = params
     switch (type) {
-    case 'all-tasks':
+    case 'history':
       return this.fetchUnfilteredTaskList(params)
     case 'active':
       return this.fetchDownloadingTaskList(params)

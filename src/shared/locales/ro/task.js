@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Se descarcă',
   'waiting': 'În aşteptare',
   'stopped': 'Oprite',

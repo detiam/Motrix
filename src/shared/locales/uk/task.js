@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Завантаження',
   'waiting': 'Очікування',
   'stopped': 'Зупинено',

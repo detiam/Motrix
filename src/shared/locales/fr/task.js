@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Actives',
   'waiting': 'En attente',
   'stopped': 'Stopées',

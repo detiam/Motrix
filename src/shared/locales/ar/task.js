@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'جاري التحميل',
   'waiting': 'جاري الانتظار',
   'stopped': 'المتوقفة',

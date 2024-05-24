@@ -1,4 +1,5 @@
 export default {
+  'history': 'All Tasks',
   'active': 'Laster ned',
   'waiting': 'Venter',
   'stopped': 'Stoppet',
