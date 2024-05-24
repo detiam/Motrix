@@ -110,5 +110,9 @@
     "webpack-hot-middleware": "^2.25.3",
     "webpack-merge": "^5.8.0",
     "worker-loader": "^3.0.8"
+  },
+  "volta": {
+    "node": "18.20.3",
+    "yarn": "1.22.22"
   }
 }
