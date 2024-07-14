@@ -15,7 +15,6 @@
       effect="dark"
       placement="bottom"
       :content="$t('task.delete-selected-tasks')"
-      v-if="currentList !== 'stopped'"
     >
       <i
         class="task-action"
@@ -28,20 +27,11 @@
       class="item"
       effect="dark"
       placement="bottom"
-      :content="$t('task.refresh-list')"
+      :content="$t('task.purge-record')"
+      v-if="currentList === 'stopped'"
     >
-      <i class="task-action" @click="onRefreshClick">
-        <mo-icon name="refresh" width="14" height="14" :spin="refreshing" />
-      </i>
-    </el-tooltip>
-    <el-tooltip
-      class="item"
-      effect="dark"
-      placement="bottom"
-      :content="$t('task.resume-all-task')"
-    >
-      <i class="task-action" @click="onResumeAllClick">
-        <mo-icon name="task-start-line" width="14" height="14" />
+      <i class="task-action" @click="onPurgeRecordClick">
+        <mo-icon name="purge" width="14" height="14" />
       </i>
     </el-tooltip>
     <el-tooltip
@@ -49,6 +39,7 @@
       effect="dark"
       placement="bottom"
       :content="$t('task.pause-all-task')"
+      v-if="currentList !== 'stopped'"
     >
       <i class="task-action" @click="onPauseAllClick">
         <mo-icon name="task-pause-line" width="14" height="14" />
@@ -58,11 +49,21 @@
       class="item"
       effect="dark"
       placement="bottom"
-      :content="$t('task.purge-record')"
-      v-if="currentList === 'stopped'"
+      :content="$t('task.resume-all-task')"
+      v-if="currentList !== 'stopped'"
     >
-      <i class="task-action" @click="onPurgeRecordClick">
-        <mo-icon name="purge" width="14" height="14" />
+      <i class="task-action" @click="onResumeAllClick">
+        <mo-icon name="task-start-line" width="14" height="14" />
+      </i>
+    </el-tooltip>
+    <el-tooltip
+      class="item"
+      effect="dark"
+      placement="bottom"
+      :content="$t('task.refresh-list')"
+    >
+      <i class="task-action" @click="onRefreshClick">
+        <mo-icon name="refresh" width="14" height="14" :spin="refreshing" />
       </i>
     </el-tooltip>
   </div>

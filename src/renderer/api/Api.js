@@ -226,18 +226,18 @@ export default class Api {
   fetchUnfilteredTaskList (params = {}) {
     const { offset = 0, num = 20, keys } = params
     const activeArgs = compactUndefined([keys])
-    const waitingArgs = compactUndefined([offset, num, keys])
+    const args = compactUndefined([offset, num, keys])
     return new Promise((resolve, reject) => {
       this.client.multicall([
         ['aria2.tellActive', ...activeArgs],
-        ['aria2.tellWaiting', ...waitingArgs],
-        ['aria2.tellStopped', ...waitingArgs]
+        ['aria2.tellWaiting', ...args],
+        ['aria2.tellStopped', ...args]
       ]).then((data) => {
-        console.log('[Motrix] fetch downloading task list data:', data)
+        console.log('[Motrix] fetch unfiltered task list data:', data)
         const result = mergeTaskResult(data)
         resolve(result)
       }).catch((err) => {
-        console.log('[Motrix] fetch downloading task list fail:', err)
+        console.log('[Motrix] fetch unfiltered task list fail:', err)
         reject(err)
       })
     })
@@ -387,6 +387,9 @@ export default class Api {
 
   batchRemoveTask (params = {}) {
     return this.multicall('aria2.remove', params)
+      .then(() => {
+        this.multicall('removeDownloadResult', params)
+      })
   }
 
   batchResumeTask (params = {}) {
