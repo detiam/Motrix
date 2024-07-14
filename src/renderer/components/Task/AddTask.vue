@@ -379,7 +379,7 @@
             this.$store.dispatch('app/hideAddTaskDialog')
             if (this.form.newTaskShowDownloading) {
               this.$router.push({
-                path: '/task/history'
+                path: '/task/active'
               }).catch(err => {
                 console.log(err)
               })
