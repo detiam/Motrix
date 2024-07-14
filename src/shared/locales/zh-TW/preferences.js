@@ -28,7 +28,7 @@ export default {
   'max-concurrent-downloads': '最多可同時下載的任務數',
   'max-connection-per-server': '每台伺服器的最大連線數',
   'new-task-show-downloading': '新增任務後自動顯示下載頁面',
-  'no-confirm-before-delete-task': '刪除任務之前無需確認',
+  'no-confirm-before-delete-task': '刪除任務之前無需確認（刪除時同時按 Shift 以刪除檔案）',
   'continue': '斷點續傳',
   'task-completed-notify': '下載完成後通知',
   'auto-purge-record': '當結束程式時自動清除下載紀錄',
